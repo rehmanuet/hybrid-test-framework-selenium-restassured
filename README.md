@@ -1,5 +1,5 @@
 # Hybrid QA Framework
-[![.github/workflows/ci.yml](https://github.com/rehmanuet/hybrid-test-framework-selenium-restassured/actions/workflows/ci.yml/badge.svg)](https://github.com/rehmanuet/hybrid-test-framework-selenium-restassured/actions/workflows/ci.yml)
+[![.github/workflows/main.yml](https://github.com/rehmanuet/hybrid-test-framework-selenium-restassured/actions/workflows/main.yml/badge.svg)](https://github.com/rehmanuet/hybrid-test-framework-selenium-restassured/actions/workflows/main.yml)
 ## Java | Selenium | RestAssured | TestNG | ExtentReports | POM | GitHub Actions
 
 ### Introduction
