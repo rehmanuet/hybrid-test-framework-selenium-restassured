@@ -1,0 +1,57 @@
+
+on:
+  push:
+    branches:
+      - '**'             # Any branch
+  workflow_dispatch:     # Optional manual run via GitHub UI
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install Docker Compose
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version
+
+      - name: Start Petclinic app
+        run: docker-compose up -d
+
+      - name: Wait for Spring Petclinic to be ready
+        run: |
+          for i in {1..30}; do
+            if curl -s http://localhost:8080; then
+              echo "Spring Petclinic is up!"
+              break
+            fi
+            echo "Waiting for backend to be ready..."
+            sleep 5
+          done
+
+      - name: Run Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng-ci.xml -Dheadless=true -DbaseURI=http://localhost:8080
+
+      - name: Archive test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: target/surefire-reports/
+
+      - name: Archive Extent Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extentreport
+          path: extentreport/ExtentReportResults.html
