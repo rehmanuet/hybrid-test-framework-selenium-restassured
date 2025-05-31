@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="API Test Suite" verbose="1" parallel="tests">
+    <listeners>
+        <listener class-name="common.reporting.TestListener"/>
+    </listeners>
+    <test name="Owner Tests" thread-count="5">
+        <classes>
+            <class name="api.tests.owner.OwnerGetTests"/>
+            <class name="api.tests.owner.OwnerPostTests"/>
+            <class name="api.tests.owner.OwnerPutTests"/>
+        </classes>
+    </test>
+
+    <test name="Pet Tests" thread-count="5">
+        <classes>
+            <class name="api.tests.pet.PetGetTests"/>
+            <class name="api.tests.pet.PetPostTests"/>
+            <class name="api.tests.pet.PetPutTests"/>
+        </classes>
+    </test>
+</suite>

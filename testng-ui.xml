@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="UI Test Suite" verbose="1" parallel="tests">
+    <listeners>
+        <listener class-name="common.reporting.TestListener"/>
+    </listeners>
+    <test name="UI Tests" thread-count="5">
+        <classes>
+            <class name="ui.tests.OwnerUIUITest"/>
+            <class name="ui.tests.PetUIUITest"/>
+        </classes>
+    </test>
+</suite>

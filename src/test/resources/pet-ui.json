@@ -1,0 +1,11 @@
+{
+  "validPet": {
+    "ownerName": "Peter",
+    "name": "lucyTest1",
+    "birthDate": "12/05/2025",
+    "type": {
+      "id": 1,
+      "name": "snake"
+    }
+  }
+}

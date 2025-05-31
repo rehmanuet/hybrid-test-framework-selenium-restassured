@@ -1,0 +1,58 @@
+{
+  "validOwnerWithPet": {
+    "id": 1,
+    "ownerId": 1,
+    "name": "Leo",
+    "owner": "George Franklin",
+    "birthDate": "2010-09-07",
+    "type": {
+      "id": 1,
+      "name": "cat"
+    }
+  },
+  "validOwnerWithPet2": {
+    "id": 7,
+    "ownerId": 6,
+    "name": "Samantha",
+    "owner": "Jean Coleman",
+    "birthDate": "2012-09-04",
+    "type": {
+      "id": 1,
+      "name": "cat"
+    }
+  },
+  "petNotFound": {
+    "id": 32323,
+    "ownerId": 3
+  },
+  "petNotFoundInvalidOwnerId": {
+    "id": 122,
+    "ownerId": 32323
+  },
+  "createNewPet": {
+    "ownerId": "2",
+    "pet": {
+      "id": "1",
+      "name": "Lucy",
+      "birthDate": "2025-05-12",
+      "typeId": "1"
+    }
+  },
+  "createNewPetWithoutName": {
+    "ownerId": "2",
+    "pet": {
+      "id": "1",
+      "birthDate": "2025-05-12",
+      "typeId": "1"
+    }
+  },
+  "updatePet": {
+    "ownerId": "2",
+    "pet": {
+      "id": "1",
+      "name": "Lucy",
+      "birthDate": "2025-05-12",
+      "typeId": "1"
+    }
+  }
+}

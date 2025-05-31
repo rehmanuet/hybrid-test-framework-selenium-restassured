@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="BackBase Assignment" verbose="1" parallel="tests">
+    <listeners>
+        <listener class-name="common.reporting.TestListener"/>
+    </listeners>
+
+    <test name="All Tests" thread-count="5">
+        <groups>
+            <run>
+                <!-- Skipping Known Bugs for CI -->
+                <exclude name="bug"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Owner Tests -->
+            <class name="api.tests.owner.OwnerGetTests"/>
+            <class name="api.tests.owner.OwnerPostTests"/>
+            <class name="api.tests.owner.OwnerPutTests"/>
+
+            <!-- Pet Tests -->
+            <class name="api.tests.pet.PetGetTests"/>
+            <class name="api.tests.pet.PetPostTests"/>
+            <class name="api.tests.pet.PetPutTests"/>
+
+            <!-- UI Tests -->
+            <class name="ui.tests.OwnerUIUITest"/>
+            <class name="ui.tests.PetUIUITest"/>
+        </classes>
+    </test>
+</suite>

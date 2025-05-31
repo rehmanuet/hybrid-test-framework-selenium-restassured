@@ -1,0 +1,44 @@
+{
+  "createNewOwner": {
+    "firstName": "Abdur",
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutFN": {
+    "firstName": "",
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutLN": {
+    "id": 8,
+    "firstName": "Abdur",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "viewOwner": {
+    "firstName": "Jeff",
+    "lastName": "Black",
+    "address": "1450 Oak Blvd.",
+    "city": "Monona",
+    "telephone": "6085555387"
+  },
+  "updateOwner": {
+    "firstName": "Peter",
+    "lastName": "McTavish",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "ownerNewPet": {
+    "firstName": "Peter",
+    "lastName": "McTavish",
+    "address": "2387 S. Fair Way",
+    "city": "Madison",
+    "telephone": "6085552765"
+  }
+}

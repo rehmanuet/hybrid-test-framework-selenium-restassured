@@ -1,0 +1,84 @@
+{
+  "ownerValidId": {
+    "id": 1,
+    "firstName": "George",
+    "lastName": "Franklin",
+    "address": "110 W. Liberty St.",
+    "city": "Madison",
+    "telephone": "6085551023",
+    "pets": [
+      {
+        "id": 1,
+        "name": "Leo",
+        "birthDate": "2010-09-07",
+        "type": {
+          "id": 1,
+          "name": "cat"
+        },
+        "visits": []
+      }
+    ]
+  },
+  "ownerInvalidId": {
+    "id": "inv233"
+  },
+  "ownerNotFoundId": {
+    "id": "32323"
+  },
+  "ownerValidSchemaUserId": {
+    "id": "3"
+  },
+  "validOwner": {
+    "id": "2",
+    "firstName": "Betty",
+    "lastName": "Davis",
+    "address": "638 Cardinal Ave.",
+    "city": "Sun Prairie",
+    "telephone": "6085551749"
+  },
+  "createNewOwner": {
+    "firstName": "Abdur",
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutFN": {
+    "id": 8,
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutLN": {
+    "id": 8,
+    "firstName": "Abdur",
+    "address": "Netherlands",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutAddress": {
+    "id": 8,
+    "firstName": "Abdur",
+    "lastName": "Rehman",
+    "city": "Amsterdam",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutCity": {
+    "id": 8,
+    "firstName": "Abdur",
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "telephone": "06122223233"
+  },
+  "createNewOwnerWithoutTelephone": {
+    "id": 8,
+    "firstName": "Abdur",
+    "lastName": "Rehman",
+    "address": "Netherlands",
+    "city": "Amsterdam"
+  },
+  "updateOwner": {
+    "id": "6"
+  }
+}
